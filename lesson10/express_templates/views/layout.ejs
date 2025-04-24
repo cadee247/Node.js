@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recipe App</title>
+	<style media="screen">
+		/* Ensure the body covers the entire height and applies consistent styling */
+		body {
+			margin: 0;
+			padding: 0;
+			min-height: 100vh; /* Ensures proper page height */
+			color: black;
+			text-align: center;
+			font-family: sans-serif;
+		}
+
+		/* Navigation bar styling */
+		#nav {
+			background-color: #7D498D;
+			padding: 10px 0;
+			width: 100%;
+		}
+
+		/* Footer styling and positioning */
+		#footer {
+			background-color: #9C73A9;
+			position: fixed; /* Keeps footer always at the bottom */
+			bottom: 0;
+			width: 100%; /* Ensures it spans across the page */
+			text-align: center;
+			padding: 10px 0;
+			color: white;
+			font-size: 14px;
+		}
+
+		/* Container styling */
+		#container {
+			min-height: calc(100vh - 100px); /* Accounts for the footer's height */
+			padding-top: 40px;
+			box-sizing: border-box;
+		}
+
+		/* Block styling */
+		.block {
+			padding-top: 40px;
+			width: 100%;
+			text-align: center;
+			height: 60px;
+			border: black dashed 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Include navigation partial -->
+	<% include partials/navigation %>
+
+	<!-- Content container -->
+	<div id="container">
+		<%- body %>
+	</div>
+
+	<!-- Fixed footer at the bottom -->
+	<div id="footer" class="block">
+		FOOTER
+	</div>
+</body>
+
+</html>
