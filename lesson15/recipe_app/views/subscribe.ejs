@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Subscribe</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+			text-align: center;
+		}
+		.subscription-form {
+			margin: 0 auto;
+			width: 300px;
+			padding: 15px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+		}
+		input {
+			display: block;
+			margin: 10px 0;
+			padding: 10px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+		button {
+			background-color: #007BFF;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #0056b3;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Subscribe to Our Newsletter</h1>
+	<form class="subscription-form" action="/subscribe" method="post">
+		<input type="text" name="name" placeholder="Name" required>
+		<input type="email" name="email" placeholder="Email" required>
+		<input type="text" name="zipCode" placeholder="Zip Code" pattern="[0-9]{5}" required>
+		<button type="submit">Subscribe</button>
+	</form>
+</body>
+
+</html>
