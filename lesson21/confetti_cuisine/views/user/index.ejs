@@ -1,0 +1,14 @@
+<% users.forEach(user => { %>
+    <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td>
+            <a href="/users/edit/<%= user._id %>">
+                <button>Edit</button>
+            </a>
+            <form action="/users/delete/<%= user._id %>" method="POST" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+<% }) %>
