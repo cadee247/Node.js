@@ -1,0 +1,26 @@
+<div class="data-form">
+  <form class="form-signin" action="<%= "/courses/create" %>" method="POST">
+    <h2 class="form-signin-heading">Create a new course:</h2>
+
+    <!-- Title Input (Changed from dropdown to text field) -->
+    <label for="inputTitle">Title</label>
+    <input type="text" name="title" id="inputTitle" class="form-control" placeholder="Enter Course Title" required>
+
+    <!-- Description Input -->
+    <label for="inputDescription">Description</label>
+    <input type="text" name="description" id="inputDescription" class="form-control" placeholder="Course Description">
+
+  
+
+    <!-- Max Students Input -->
+    <label for="inputMaxStudents">Max Students</label>
+    <input type="number" name="maxStudents" id="inputMaxStudents" class="form-control" placeholder="Max Students" min="1" max="1000" required>
+
+    <!-- Cost Input -->
+    <label for="inputCost">Cost</label>
+    <input type="number" name="cost" id="inputCost" class="form-control" placeholder="Course Cost" min="1" max="10000" required>
+
+    <br />
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+  </form>
+</div>
